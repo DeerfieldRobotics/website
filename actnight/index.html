@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Join Deerfield Robotics</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Information regarding Deerfield Robotics, for activities night at Deerfield High School." />
+    <link href="https://fonts.googleapis.com/css?display=swap&family=Anton:400,400italic%7CDM+Sans:400,400italic,700,700italic%7CLato:400,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <h1 id="title">Deerfield Robotics</h1>
+                <ul id="gotolink" class="buttons">
+                    <li>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9ZSsDdPR1H9DupQIruJRLAu3duYV9dnTX3iKzcQM1JsPTdg/viewform" class="button n01">
+                            <span class="label">Interested? Fill out this form</span>
+                        </a>
+                    </li>
+                </ul>
+                <p id="text03">
+                    <span class="p">Deerfield Robotics is a club at DHS that runs and manages three teams. These teams are a part of the FIRST Tech Challenge, the global league for robotics.</span>
+
+                    <span class="p">If you want to join, or are even interested, add yourself to the interest form and we'll email you regarding the upcoming season. Even if you aren't that interested, we still recommend you come to the boot camp!</span>
+
+                    <span class="p"><strong>Eligibility</strong><br /> All DHS Students</span>
+
+                    <span class="p"><strong>Time Period</strong><br /> Sept-Nov: Planning, Design, and Build<br /> Nov-Jan: Regional and State Tournaments<br /> Jan-May: Postseason (optional)</span>
+
+                    <span class="p"><strong>Meetings</strong><br /> Tuesday-Thursday, 3:15-5:30 PM in J111<br /> Recommended commitment level is 1-2 times/week<br /> Meeting times are more frequent during week leading up to meets<br /> Held in dedicated lab space</span>
+
+                    <span class="p"><strong>Skills Required</strong><br /> None! If you have skills in CAD, design, Java, etc., that's great! However, we hold a three-day <strong>boot camp</strong> at the beginning of the season after school, and everyone will be taught the basics. Otherwise, team members learn through observation and working in the lab.</span>
+
+                    <span class="p"><strong>Contacts</strong></span>
+
+                    <span>Mr. Howard Citron, Sponsor<br /><a id="citronemail">Loading...</a></span>
+
+                    <span class="p">Ethan Jacobs, Student President<br /><a id="ethanemail">Loading...</a></span>
+
+                    <span class="p">Mikey Evarts, Student President<br /><a id="mikeyemail">Loading...</a></span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const emails = ['aGNpdHJvbkBkZWVyZmllbGRyb2JvdGljcy5vcmc=', 'ZWphY29ic0BkZWVyZmllbGRyb2JvdGljcy5vcmc=', 'bWV2YXJ0c0BkZWVyZmllbGRyb2JvdGljcy5vcmc=']
+
+        const emailsId = ['citronemail', 'ethanemail', 'mikeyemail'];
+
+        setTimeout(() => {
+            emailsId.forEach((element, index) => {
+                document.getElementById(element).innerText = atob(emails[index]);
+                document.getElementById(element).href = `mailto:${atob(emails[index])}`;
+            });
+        }, 1500);
+    </script>
+
+</body>
+
+</html>
