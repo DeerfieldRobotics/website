@@ -43,8 +43,8 @@ setTimeout(() => {
     };
     sendData("New page load");
 
-    document.getElementById("formfill").onclick = async (e) => {
-        e.preventDefault();
+    document.getElementById("formfill").href = "javascript: void(0);";
+    document.getElementById("formfill").onclick = async () => {
         await sendData("Form Clicked");
         window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSc9ZSsDdPR1H9DupQIruJRLAu3duYV9dnTX3iKzcQM1JsPTdg/viewform";
     };
