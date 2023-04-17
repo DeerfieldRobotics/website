@@ -12,7 +12,7 @@ setTimeout(() => {
 }, 1500);
 
 (async () => {
-    const DATA_SITE = "http://localhost:3000";
+    const DATA_SITE = "https://link.deerfieldrobotics.org";
 
     let sesNum = 0;
     if (localStorage.getItem("sess")) {
