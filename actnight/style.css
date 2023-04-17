@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?display=swap&family=Anton:400,400italic%7CDM+Sans:400,400italic,700,700italic%7CLato:400,400italic,700,700italic');
+
 html,
 body,
 div,
@@ -213,6 +215,10 @@ a {
     transition: color 0.25s ease;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 #wrapper {
     -webkit-overflow-scrolling: touch;
     align-items: center;
@@ -247,7 +253,8 @@ a {
 
 #main>.inner {
     --padding-horizontal: 3rem;
-    --padding-vertical: 3rem;
+    --padding-top: 3rem;
+    --padding-bottom: 0rem;
     --spacing: 0.75rem;
     --width: 40rem;
     border-radius: var(--border-radius-tl) var(--border-radius-tr) var(--border-radius-br) var(--border-radius-bl);
@@ -255,7 +262,7 @@ a {
     position: relative;
     width: var(--width);
     z-index: 1;
-    padding: var(--padding-vertical) var(--padding-horizontal);
+    padding: var(--padding-top) var(--padding-horizontal) var(--padding-bottom);
 }
 
 #main>.inner>* {
@@ -537,7 +544,7 @@ p mark {
     font-weight: 400;
 }
 
-#text03 {
+#bodytext {
     text-align: left;
     color: #ECEFF3;
     font-family: 'Lato', sans-serif;
@@ -546,20 +553,21 @@ p mark {
     font-weight: 400;
 }
 
-#text03 strong {
+#bodytext strong {
     color: #F22447;
 }
 
-#text03 a {
-    text-decoration: underline;
-}
-
-#text03 a:hover {
-    text-decoration: none;
-}
-
-#text03 span.p:nth-child(n + 2) {
+#bodytext span.p:nth-child(n + 2) {
     margin-top: 1rem;
+}
+
+.smallnotice {
+    text-align: center;
+    color: #ECEFF3;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.5em;
+    line-height: 1.125;
+    font-weight: 400;
 }
 
 .buttons {
@@ -607,7 +615,7 @@ p mark {
 
 #gotolink li a .label {
     direction: var(--site-language-direction);
-    overflow: hidden;
+    /* overflow: hidden; I THINK this is why the button doesn't work well*/
     text-overflow: ellipsis;
 }
 
@@ -735,7 +743,7 @@ p mark {
         font-size: 3.5em;
     }
 
-    #text03 {
+    #bodytext {
         letter-spacing: 0;
         width: 100%;
         font-size: 0.875em;
@@ -782,7 +790,7 @@ p mark {
         font-size: 3.5em;
     }
 
-    #text03 {
+    #bodytext {
         font-size: 0.875em;
     }
 
