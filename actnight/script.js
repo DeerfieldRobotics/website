@@ -43,7 +43,11 @@ setTimeout(() => {
     };
     sendData("New page load");
 
-    document.getElementById("formfill").onclick = () => sendData("Form Clicked");
+    document.getElementById("formfill").onclick = async (e) => {
+        e.preventDefault();
+        await sendData("Form Clicked");
+        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSc9ZSsDdPR1H9DupQIruJRLAu3duYV9dnTX3iKzcQM1JsPTdg/viewform";
+    };
     document.getElementById("citronemail").onclick = () => sendData("Citron Emailed");
     document.getElementById("ethanemail").onclick = () => sendData("Ethan Emailed");
     document.getElementById("mikeyemail").onclick = () => sendData("Mikey Emailed");
