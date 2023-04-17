@@ -49,7 +49,7 @@ setTimeout(() => {
     document.getElementById("formfill").onclick = (e) => {
         e.preventDefault();
         sendData("Form Clicked").then(() => {
-            window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSc9ZSsDdPR1H9DupQIruJRLAu3duYV9dnTX3iKzcQM1JsPTdg/viewform";
+            window.location.href = "https://forms.gle/Hz9q7Rp1CRpmpcLNA";
         });
     };
 })();
