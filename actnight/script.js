@@ -41,14 +41,17 @@ setTimeout(() => {
             localStorage.setItem("id", res.id);
         }
     };
-    sendData("New page load");
-
-    document.getElementById("formfill").href = "javascript: void(0);";
-    document.getElementById("formfill").onclick = async () => {
-        await sendData("Form Clicked");
-        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSc9ZSsDdPR1H9DupQIruJRLAu3duYV9dnTX3iKzcQM1JsPTdg/viewform";
-    };
     document.getElementById("citronemail").onclick = () => sendData("Citron Emailed");
     document.getElementById("ethanemail").onclick = () => sendData("Ethan Emailed");
     document.getElementById("mikeyemail").onclick = () => sendData("Mikey Emailed");
+    document.getElementById("formfill").onclick = (e) => {
+        e.preventDefault();
+        sendData("Form Clicked").then(() => {
+            window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSc9ZSsDdPR1H9DupQIruJRLAu3duYV9dnTX3iKzcQM1JsPTdg/viewform";
+        });
+    };
+
+    await sendData("New page load");
+
+    document.getElementById("formfill").href = DATA_SITE + "/go/" + encodeURIComponent(btoa("act23+" + localStorage.getItem("id") + "+" + sesNum));
 })();
