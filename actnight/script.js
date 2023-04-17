@@ -1,5 +1,3 @@
-
-
 const emails = ['aGNpdHJvbkBkZWVyZmllbGRyb2JvdGljcy5vcmc=', 'ZWphY29ic0BkZWVyZmllbGRyb2JvdGljcy5vcmc=', 'bWV2YXJ0c0BkZWVyZmllbGRyb2JvdGljcy5vcmc=']
 
 const emailsId = ['citronemail', 'ethanemail', 'mikeyemail'];
@@ -44,14 +42,14 @@ setTimeout(() => {
     document.getElementById("citronemail").onclick = () => sendData("Citron Emailed");
     document.getElementById("ethanemail").onclick = () => sendData("Ethan Emailed");
     document.getElementById("mikeyemail").onclick = () => sendData("Mikey Emailed");
+
+    await sendData("New page load");
+
+    document.getElementById("formfill").href = DATA_SITE + "/go/" + encodeURIComponent(btoa("act23+" + localStorage.getItem("id") + "+" + sesNum));
     document.getElementById("formfill").onclick = (e) => {
         e.preventDefault();
         sendData("Form Clicked").then(() => {
             window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSc9ZSsDdPR1H9DupQIruJRLAu3duYV9dnTX3iKzcQM1JsPTdg/viewform";
         });
     };
-
-    await sendData("New page load");
-
-    document.getElementById("formfill").href = DATA_SITE + "/go/" + encodeURIComponent(btoa("act23+" + localStorage.getItem("id") + "+" + sesNum));
 })();
