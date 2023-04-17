@@ -17,7 +17,7 @@
                 <h1 id="title">Deerfield Robotics</h1>
                 <ul id="gotolink" class="buttons">
                     <li>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9ZSsDdPR1H9DupQIruJRLAu3duYV9dnTX3iKzcQM1JsPTdg/viewform" class="button n01">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9ZSsDdPR1H9DupQIruJRLAu3duYV9dnTX3iKzcQM1JsPTdg/viewform" id="formfill" class="button n01">
                             <span class="label fillform">Interested? Fill out this form</span>
                         </a>
                     </li>
@@ -45,20 +45,11 @@
                 </p>
             </div>
         </div>
+        <br /><br />
+        <span style="color: white; font-size: x-small;">Notice: we use web technologies to judge the effectiveness of our outreach campaigns.</span>
     </div>
 
-    <script>
-        const emails = ['aGNpdHJvbkBkZWVyZmllbGRyb2JvdGljcy5vcmc=', 'ZWphY29ic0BkZWVyZmllbGRyb2JvdGljcy5vcmc=', 'bWV2YXJ0c0BkZWVyZmllbGRyb2JvdGljcy5vcmc=']
-
-        const emailsId = ['citronemail', 'ethanemail', 'mikeyemail'];
-
-        setTimeout(() => {
-            emailsId.forEach((element, index) => {
-                document.getElementById(element).innerText = atob(emails[index]);
-                document.getElementById(element).href = `mailto:${atob(emails[index])}`;
-            });
-        }, 1500);
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
