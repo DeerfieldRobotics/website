@@ -1,0 +1,172 @@
+:root {
+    --bg-main: #2a3341;
+    --bg-light: #8596b0;
+    --robotics-red: #f22447;
+    --link: #009edc;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--robotics-red);
+    padding-top: 1rem;
+}
+
+.btn-contact {
+    background-color: var(--robotics-red);
+    color: white;
+}
+
+.hof {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    color: white;
+
+    .hof-bio-container {
+        .hof-inducted {
+            color: var(--robotics-red);
+            font-weight: normal;
+            font-style: italic;
+            font-size: 1.25rem;
+        }
+
+        .hof-pfp-container {
+            display: flex;
+            align-items: center;
+        }
+
+        & {
+            display: flex;
+
+            @media screen and (orientation: portrait) {
+                flex-wrap: wrap;
+            }
+
+            gap: 1.5rem;
+        }
+    }
+}
+
+.bigphoto {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    height: 80vw;
+    width: 100%;
+    object-fit: cover;
+}
+
+#carousel {
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    height: 60vh;
+
+    .carousel-inner {
+        height: 100%;
+        position: inherit;
+
+        .carousel-item {
+            position: inherit;
+            width: 100%;
+            height: 100%;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+nav {
+    .container-fluid {
+        .navbar-brand {
+            width: 10vw;
+
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .navbar-toggler {
+            background-color: white;
+        }
+
+        div {
+            .navbar-collapse {
+                .navbar-nav {
+                    .nav-link {
+                        color: white;
+                        transition: inherit;
+                    }
+                }
+            }
+        }
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: white;
+}
+
+footer {
+    background-color: var(--bg-light);
+    position: relative;
+    bottom: -3rem;
+    width: 100vw;
+
+    padding-left: 3rem;
+
+    .icon-container {
+        display: flex;
+        align-items: center;
+
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        .icon-label {
+            font-weight: bold;
+            padding-left: .5rem;
+            padding-right: 1rem;
+
+            @media screen and (orientation: portrait) {
+                padding-left: .25rem;
+                padding-right: .5rem;
+            }
+        }
+
+        .icons {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0;
+            margin: 0;
+            height: 2rem;
+
+            a,
+            img {
+                height: 100%;
+                margin-right: .5rem;
+                width: 100%;
+
+                @media screen and (orientation: portrait) {
+                    margin-right: .25rem;
+                }
+            }
+        }
+    }
+
+    #github {
+        color: white;
+    }
+}
