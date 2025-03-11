@@ -14,6 +14,7 @@
         "@parcel/reporter-bundle-analyzer": "^2.13.3",
         "@parcel/transformer-sass": "^2.13.3",
         "parcel": "^2.13.3",
-        "posthtml-include": "^2.0.1"
+        "posthtml-include": "^2.0.1",
+        "svgo": "^3.3.2"
     }
 }
