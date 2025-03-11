@@ -1,14 +1,19 @@
 {
-  "name": "website",
-  "version": "1.0.0",
-  "description": "Our website",
-  "main": "pv.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.19.2"
-  }
+    "name": "website",
+    "type": "module",
+    "version": "0.0.1",
+    "source": [
+        "./src/index.html"
+    ],
+    "dependencies": {
+        "bootstrap": "^5.3.3"
+    },
+    "devDependencies": {
+        "@parcel/config-default": "^2.13.3",
+        "@parcel/plugin": "^2.13.3",
+        "@parcel/reporter-bundle-analyzer": "^2.13.3",
+        "@parcel/transformer-sass": "^2.13.3",
+        "parcel": "^2.13.3",
+        "posthtml-include": "^2.0.1"
+    }
 }
